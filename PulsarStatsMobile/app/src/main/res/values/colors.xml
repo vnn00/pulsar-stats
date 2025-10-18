@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Colors -->
+    <color name="md_theme_light_primary">#006C4C</color>
+    <color name="md_theme_light_onPrimary">#FFFFFF</color>
+    <color name="md_theme_light_primaryContainer">#89F8C7</color>
+    <color name="md_theme_light_onPrimaryContainer">#002114</color>
+    <color name="md_theme_light_secondary">#4D6357</color>
+    <color name="md_theme_light_onSecondary">#FFFFFF</color>
+    <color name="md_theme_light_secondaryContainer">#CFE9D9</color>
+    <color name="md_theme_light_onSecondaryContainer">#092016</color>
+    <color name="md_theme_light_background">#F5FBF7</color>
+    <color name="md_theme_light_onBackground">#171D1A</color>
+    <color name="md_theme_light_surface">#F5FBF7</color>
+    <color name="md_theme_light_onSurface">#171D1A</color>
+    <color name="md_theme_light_error">#BA1A1A</color>
+    <color name="md_theme_light_onError">#FFFFFF</color>
+    
+    <color name="md_theme_dark_primary">#6CDBAC</color>
+    <color name="md_theme_dark_onPrimary">#003826</color>
+    <color name="md_theme_dark_primaryContainer">#005138</color>
+    <color name="md_theme_dark_onPrimaryContainer">#89F8C7</color>
+    <color name="md_theme_dark_secondary">#B3CCBD</color>
+    <color name="md_theme_dark_onSecondary">#1F352A</color>
+    <color name="md_theme_dark_secondaryContainer">#354B40</color>
+    <color name="md_theme_dark_onSecondaryContainer">#CFE9D9</color>
+    <color name="md_theme_dark_background">#171D1A</color>
+    <color name="md_theme_dark_onBackground">#DFE4DF</color>
+    <color name="md_theme_dark_surface">#171D1A</color>
+    <color name="md_theme_dark_onSurface">#DFE4DF</color>
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    
+    <!-- Custom Colors -->
+    <color name="status_connected">#4CAF50</color>
+    <color name="status_disconnected">#F44336</color>
+    <color name="status_warning">#FF9800</color>
+    
+    <color name="cpu_color">#2196F3</color>
+    <color name="gpu_color">#00BCD4</color>
+    <color name="ram_color">#9C27B0</color>
+    <color name="disk_color">#FF5722</color>
+    <color name="temp_normal">#4CAF50</color>
+    <color name="temp_warning">#FF9800</color>
+    <color name="temp_critical">#F44336</color>
+    
+    <!-- Legacy -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

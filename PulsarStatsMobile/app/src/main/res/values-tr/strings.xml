@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Uygulama Genel -->
+    <string name="app_name">Pulsar Stats</string>
+    <string name="app_description">PC System Monitoring</string>
+    
+    <!-- Splash / IP Giriş Ekranı -->
+    <string name="splash_title">Sunucu Bağlantısı</string>
+    <string name="splash_subtitle">Bilgisayarınızın IP adresini girin</string>
+    <string name="ip_hint">örn: 192.168.1.100</string>
+    <string name="port_hint">Port (varsayılan: 5000)</string>
+    <string name="btn_connect">Bağlan</string>
+    <string name="error_invalid_ip">Geçersiz IP adresi</string>
+    <string name="error_connection_failed">Bağlantı başarısız! Sunucunun çalıştığından emin olun.</string>
+    <string name="saved_ip_found">Kayıtlı sunucu bulundu</string>
+    
+    <!-- Ana Ekran -->
+    <string name="connection_status">Bağlantı Durumu</string>
+    <string name="connected">Bağlı</string>
+    <string name="disconnected">Bağlantı Kesildi</string>
+    <string name="connecting">Bağlanıyor…</string>
+    <string name="reconnecting">Yeniden bağlanıyor…</string>
+    <string name="connection_status_description">Bağlantıyı yenilemek için aşağı kaydırın</string>
+    
+    <!-- CPU -->
+    <string name="cpu_title">İşlemci (CPU)</string>
+    <string name="cpu_usage">Kullanım</string>
+    <string name="cpu_frequency">Frekans</string>
+    <string name="cpu_cores">Çekirdekler</string>
+    <string name="cpu_frequency_placeholder">Frekans: -- GHz</string>
+    
+    <!-- Memory -->
+    <string name="memory_title">Bellek (RAM)</string>
+    <string name="memory_used">Kullanılan</string>
+    <string name="memory_available">Kullanılabilir</string>
+    <string name="memory_total">Toplam</string>
+    
+    <!-- GPU -->
+    <string name="gpu_title">Ekran Kartı (GPU)</string>
+    <string name="gpu_usage">Kullanım</string>
+    <string name="gpu_memory">VRAM</string>
+    <string name="gpu_not_available">GPU bilgisi alınamadı</string>
+    
+    <!-- Disk -->
+    <string name="disk_title">Diskler</string>
+    <string name="disk_used">Kullanılan</string>
+    <string name="disk_free">Boş</string>
+    <string name="disk_total">Toplam</string>
+    
+    <!-- Temperature -->
+    <string name="temperature_title">Sıcaklıklar</string>
+    <string name="temp_cpu">CPU</string>
+    <string name="temp_gpu">GPU</string>
+    <string name="temp_motherboard">Anakart</string>
+    <string name="temp_disk">Disk</string>
+    <string name="temp_not_available">Sensör bulunamadı</string>
+    
+    <!-- Network -->
+    <string name="network_title">Ağ</string>
+    <string name="network_download">İndirme</string>
+    <string name="network_upload">Yükleme</string>
+    
+    <!-- Ayarlar Ekranı -->
+    <string name="settings_title">Ayarlar</string>
+    <string name="settings_notifications">Bildirimler</string>
+    <string name="settings_notification_enable">Bildirimleri Etkinleştir</string>
+    <string name="settings_vibrate">Titreşim</string>
+    <string name="settings_sound">Ses</string>
+    <string name="threshold_label">Eşik: %1$d%2$s</string>
+    
+    <string name="settings_cpu_section">CPU Bildirimleri</string>
+    <string name="settings_cpu_enable">CPU Kullanım Bildirimi</string>
+    <string name="settings_cpu_threshold">CPU Eşik Değeri (%)</string>
+    
+    <string name="settings_ram_section">RAM Bildirimleri</string>
+    <string name="settings_ram_enable">RAM Kullanım Bildirimi</string>
+    <string name="settings_ram_threshold">RAM Eşik Değeri (%)</string>
+    
+    <string name="settings_cpu_temp_section">CPU Sıcaklık Bildirimleri</string>
+    <string name="settings_cpu_temp_enable">CPU Sıcaklık Bildirimi</string>
+    <string name="settings_cpu_temp_threshold">CPU Sıcaklık Eşiği (°C)</string>
+    
+    <string name="settings_gpu_temp_section">GPU Sıcaklık Bildirimleri</string>
+    <string name="settings_gpu_temp_enable">GPU Sıcaklık Bildirimi</string>
+    <string name="settings_gpu_temp_threshold">GPU Sıcaklık Eşiği (°C)</string>
+    
+    <string name="settings_disk_temp_section">Disk Sıcaklık Bildirimleri</string>
+    <string name="settings_disk_temp_enable">Disk Sıcaklık Bildirimi</string>
+    <string name="settings_disk_temp_threshold">Disk Sıcaklık Eşiği (°C)</string>
+    
+    <string name="settings_saved">Ayarlar kaydedildi</string>
+    <string name="settings_server">Sunucu Ayarları</string>
+    <string name="settings_change_server">Sunucu Adresini Değiştir</string>
+    
+    <!-- Bildirim -->
+    <string name="notification_channel_name">Sistem Monitörü</string>
+    <string name="notification_channel_description">Sistem performans uyarıları</string>
+    <string name="notification_title">Sistem Monitörü Aktif</string>
+    <string name="notification_monitoring">Sistem izleniyor.</string>
+    <string name="notification_high_cpu">Yüksek CPU Kullanımı: %1$d%%</string>
+    <string name="notification_high_ram">Yüksek RAM Kullanımı: %1$d%%</string>
+    <string name="notification_high_cpu_temp">Yüksek CPU Sıcaklığı: %1$.0f°C</string>
+    <string name="notification_high_gpu_temp">Yüksek GPU Sıcaklığı: %1$.0f°C</string>
+    <string name="notification_high_disk_temp">Yüksek Disk Sıcaklığı: %1$.0f°C</string>
+    
+    <!-- Menu -->
+    <string name="menu_screenshot">Ekran Görüntüsü</string>
+    <string name="menu_settings">Ayarlar</string>
+    <string name="menu_refresh">Yenile</string>
+    <string name="menu_about">Hakkında</string>
+    
+    <!-- Screenshot -->
+    <string name="screenshot_requesting">Ekran görüntüsü isteniyor…</string>
+    <string name="screenshot_received">Ekran görüntüsü alındı</string>
+    <string name="screenshot_failed">Ekran görüntüsü alınamadı</string>
+    <string name="screenshot_not_connected">Bağlantı yok! Önce sunucuya bağlanın.</string>
+    
+    <!-- Theme -->
+    <string-array name="theme_entries">
+        <item>System Default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+    
+    <!-- Genel -->
+    <string name="loading">Yükleniyor…</string>
+    <string name="error">Hata</string>
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+    <string name="save">Kaydet</string>
+    <string name="retry">Tekrar Dene</string>
+    
+    <!-- Language Settings -->
+    <string name="settings_language">Dil</string>
+    <string name="language_system">Sistem Varsayılanı</string>
+    <string name="language_turkish">Türkçe</string>
+    <string name="language_english">English</string>
+    
+    <!-- Theme Settings -->
+    <string name="settings_theme">Tema</string>
+    <string name="theme_system">Sistem Varsayılanı</string>
+    <string name="theme_light">Açık Tema</string>
+    <string name="theme_dark">Koyu Tema</string>
+    
+    <!-- Update Interval Settings -->
+    <string name="settings_update_interval">Veri Yenileme Hızı</string>
+    <string name="interval_1_second">1 Saniye (Çok Hızlı)</string>
+    <string name="interval_3_seconds">3 Saniye (Önerilen)</string>
+    <string name="interval_5_seconds">5 Saniye</string>
+    <string name="interval_10_seconds">10 Saniye</string>
+    
+    <!-- Notification Repeat Settings -->
+    <string name="settings_always_repeat">Sınır aşıldığı sürece verileri sürekli yenile</string>
+    <string name="settings_repeat_interval">Tekrar Aralığı (kapalıyken)</string>
+    <string name="interval_5_minutes">5 Dakika</string>
+    <string name="interval_15_minutes">15 Dakika</string>
+    <string name="interval_30_minutes">30 Dakika</string>
+    <string name="interval_60_minutes">60 Dakika</string>
+
+    <!-- System Info -->
+    <string name="system_info_title">Sistem Bilgileri</string>
+    
+    <!-- Swap Memory -->
+    <string name="memory_swap">Sanal Bellek</string>
+    <string name="memory_swap_not_available">Sanal bellek yok</string>
+    
+    <!-- Auto Start & Keep Screen On -->
+    <string name="settings_auto_start">Başlangıçta Otomatik Başlat</string>
+    <string name="settings_auto_start_description">Telefon açılınca izlemeyi otomatik başlat</string>
+    <string name="settings_keep_screen_on">Ekran Sürekli Açık Kalsın</string>
+    <string name="settings_keep_screen_on_description">İzleme sırasında ekranın kapanmasını engelle</string>
+
+    <!-- Screenshot -->
+    <string name="screenshot_timeout_warning">Ekran görüntüsü alınamadı. Windows sunucusunu yönetici olarak çalıştırdığınızdan emin olun ve tekrar deneyin.</string>
+</resources>
+

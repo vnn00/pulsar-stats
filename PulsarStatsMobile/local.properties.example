@@ -1,0 +1,11 @@
+## This file is used by Gradle to locate your Android SDK
+## Copy this file to 'local.properties' and update the path
+##
+## For Windows:
+# sdk.dir=C\:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk
+##
+## For macOS:
+# sdk.dir=/Users/YourUsername/Library/Android/sdk
+##
+## For Linux:
+# sdk.dir=/home/YourUsername/Android/Sdk

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <!-- Theme Category -->
+    <PreferenceCategory
+        android:title="Appearance"
+        android:key="appearance_category">
+        
+        <ListPreference
+            android:key="theme"
+            android:title="Theme"
+            android:summary="Choose app theme"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="system"
+            android:icon="@drawable/ic_theme" />
+            
+    </PreferenceCategory>
+    
+    <!-- Temperature Notifications Category -->
+    <PreferenceCategory
+        android:title="Temperature Alerts"
+        android:key="temp_category">
+        
+        <SwitchPreferenceCompat
+            android:key="temp_notifications_enabled"
+            android:title="Enable temperature alerts"
+            android:summary="Show notification when temperature exceeds threshold"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_notifications" />
+        
+        <EditTextPreference
+            android:key="temp_threshold_cpu"
+            android:title="CPU temperature threshold"
+            android:summary="Set maximum CPU temperature (°C)"
+            android:defaultValue="85"
+            android:inputType="number"
+            android:dependency="temp_notifications_enabled" />
+        
+        <EditTextPreference
+            android:key="temp_threshold_gpu"
+            android:title="GPU temperature threshold"
+            android:summary="Set maximum GPU temperature (°C)"
+            android:defaultValue="85"
+            android:inputType="number"
+            android:dependency="temp_notifications_enabled" />
+        
+        <SwitchPreferenceCompat
+            android:key="temp_vibrate"
+            android:title="Vibrate on alert"
+            android:summary="Vibrate when temperature exceeds threshold"
+            android:defaultValue="true"
+            android:dependency="temp_notifications_enabled" />
+        
+        <SwitchPreferenceCompat
+            android:key="temp_sound"
+            android:title="Sound on alert"
+            android:summary="Play sound when temperature exceeds threshold"
+            android:defaultValue="true"
+            android:dependency="temp_notifications_enabled" />
+            
+    </PreferenceCategory>
+    
+    <!-- Connection Category -->
+    <PreferenceCategory
+        android:title="Connection"
+        android:key="connection_category">
+        
+        <SwitchPreferenceCompat
+            android:key="auto_start"
+            android:title="Start on boot"
+            android:summary="Automatically start monitoring when phone boots"
+            android:defaultValue="false"
+            android:icon="@drawable/ic_refresh" />
+        
+        <SwitchPreferenceCompat
+            android:key="persistent_notification"
+            android:title="Show persistent notification"
+            android:summary="Display system stats in notification bar"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_notifications" />
+        
+        <SwitchPreferenceCompat
+            android:key="auto_reconnect"
+            android:title="Auto reconnect"
+            android:summary="Automatically reconnect when connection is lost"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_refresh" />
+        
+        <EditTextPreference
+            android:key="update_interval"
+            android:title="Update interval"
+            android:summary="Data update interval (seconds)"
+            android:defaultValue="3"
+            android:inputType="number" />
+            
+    </PreferenceCategory>
+    
+</PreferenceScreen>

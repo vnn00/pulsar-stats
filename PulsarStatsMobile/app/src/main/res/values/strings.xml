@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App General -->
+    <string name="app_name">Pulsar Stats</string>
+    <string name="app_description">PC System Monitoring</string>
+    
+    <!-- Splash / IP Entry Screen -->
+    <string name="splash_title">Server Connection</string>
+    <string name="splash_subtitle">Enter your computer\'s IP address</string>
+    <string name="ip_hint">e.g: 192.168.1.100</string>
+    <string name="port_hint">Port (default: 5000)</string>
+    <string name="btn_connect">Connect</string>
+    <string name="error_invalid_ip">Invalid IP address</string>
+    <string name="error_connection_failed">Connection failed! Make sure server is running.</string>
+    <string name="saved_ip_found">Saved server found</string>
+    
+    <!-- Main Screen -->
+    <string name="connection_status">Connection Status</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connecting">Connecting…</string>
+    <string name="reconnecting">Reconnecting…</string>
+    <string name="connection_status_description">Swipe down to refresh connection status</string>
+    
+    <!-- CPU -->
+    <string name="cpu_title">Processor (CPU)</string>
+    <string name="cpu_usage">Usage</string>
+    <string name="cpu_frequency">Frequency</string>
+    <string name="cpu_cores">Cores</string>
+    <string name="cpu_frequency_placeholder">Frequency: -- GHz</string>
+    
+    <!-- Memory -->
+    <string name="memory_title">Memory (RAM)</string>
+    <string name="memory_used">Used</string>
+    <string name="memory_available">Available</string>
+    <string name="memory_total">Total</string>
+    
+    <!-- GPU -->
+    <string name="gpu_title">Graphics Card (GPU)</string>
+    <string name="gpu_usage">Usage</string>
+    <string name="gpu_memory">VRAM</string>
+    <string name="gpu_not_available">GPU info not available</string>
+    
+    <!-- Disk -->
+    <string name="disk_title">Disks</string>
+    <string name="disk_used">Used</string>
+    <string name="disk_free">Free</string>
+    <string name="disk_total">Total</string>
+    
+    <!-- Temperature -->
+    <string name="temperature_title">Temperatures</string>
+    <string name="temp_cpu">CPU</string>
+    <string name="temp_gpu">GPU</string>
+    <string name="temp_motherboard">Motherboard</string>
+    <string name="temp_disk">Disk</string>
+    <string name="temp_not_available">Sensor not found</string>
+    
+    <!-- Network -->
+    <string name="network_title">Network</string>
+    <string name="network_download">Download</string>
+    <string name="network_upload">Upload</string>
+    
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_notification_enable">Enable Notifications</string>
+    <string name="settings_vibrate">Vibration</string>
+    <string name="settings_sound">Sound</string>
+    <string name="threshold_label">Threshold: %1$d%2$s</string>
+    
+    <string name="settings_cpu_section">CPU Notifications</string>
+    <string name="settings_cpu_enable">CPU Usage Notification</string>
+    <string name="settings_cpu_threshold">CPU Threshold (%)</string>
+    
+    <string name="settings_ram_section">RAM Notifications</string>
+    <string name="settings_ram_enable">RAM Usage Notification</string>
+    <string name="settings_ram_threshold">RAM Threshold (%)</string>
+    
+    <string name="settings_cpu_temp_section">CPU Temperature Notifications</string>
+    <string name="settings_cpu_temp_enable">CPU Temperature Notification</string>
+    <string name="settings_cpu_temp_threshold">CPU Temperature Threshold (°C)</string>
+    
+    <string name="settings_gpu_temp_section">GPU Temperature Notifications</string>
+    <string name="settings_gpu_temp_enable">GPU Temperature Notification</string>
+    <string name="settings_gpu_temp_threshold">GPU Temperature Threshold (°C)</string>
+    
+    <string name="settings_disk_temp_section">Disk Temperature Notifications</string>
+    <string name="settings_disk_temp_enable">Disk Temperature Notification</string>
+    <string name="settings_disk_temp_threshold">Disk Temperature Threshold (°C)</string>
+    
+    <string name="settings_saved">Settings saved</string>
+    <string name="settings_server">Server Settings</string>
+    <string name="settings_change_server">Change Server Address</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">System Monitor</string>
+    <string name="notification_channel_description">System performance alerts</string>
+    <string name="notification_title">System Monitor Active</string>
+    <string name="notification_monitoring">Monitoring system.</string>
+    <string name="notification_high_cpu">High CPU Usage: %1$d%%</string>
+    <string name="notification_high_ram">High RAM Usage: %1$d%%</string>
+    <string name="notification_high_cpu_temp">High CPU Temperature: %1$.0f°C</string>
+    <string name="notification_high_gpu_temp">High GPU Temperature: %1$.0f°C</string>
+    <string name="notification_high_disk_temp">High Disk Temperature: %1$.0f°C</string>
+    
+    <!-- Menu -->
+    <string name="menu_screenshot">Screenshot</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_about">About</string>
+    
+    <!-- Screenshot -->
+    <string name="screenshot_requesting">Requesting screenshot…</string>
+    <string name="screenshot_received">Screenshot received</string>
+    <string name="screenshot_failed">Screenshot failed</string>
+    <string name="screenshot_not_connected">Not connected! Connect to server first.</string>
+    
+    <!-- Theme -->
+    <string-array name="theme_entries">
+        <item>System Default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>system</item>
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+    
+    <!-- General -->
+    <string name="loading">Loading…</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="retry">Retry</string>
+    
+    <!-- Language Settings -->
+    <string name="settings_language">Language</string>
+    <string name="language_system">System Default</string>
+    <string name="language_turkish">Türkçe</string>
+    <string name="language_english">English</string>
+    
+    <!-- Theme Settings -->
+    <string name="settings_theme">Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light Theme</string>
+    <string name="theme_dark">Dark Theme</string>
+    
+    <!-- Update Interval Settings -->
+    <string name="settings_update_interval">Data Update Speed</string>
+    <string name="interval_1_second">1 Second (Very Fast)</string>
+    <string name="interval_3_seconds">3 Seconds (Recommended)</string>
+    <string name="interval_5_seconds">5 Seconds</string>
+    <string name="interval_10_seconds">10 Seconds</string>
+    
+    <!-- Notification Repeat Settings -->
+    <string name="settings_always_repeat">Repeat while threshold exceeded</string>
+    <string name="settings_repeat_interval">Repeat Interval (when disabled)</string>
+    <string name="interval_5_minutes">5 Minutes</string>
+    <string name="interval_15_minutes">15 Minutes</string>
+    <string name="interval_30_minutes">30 Minutes</string>
+    <string name="interval_60_minutes">60 Minutes</string>
+
+    <!-- System Info -->
+    <string name="system_info_title">System Information</string>
+    
+    <!-- Swap Memory -->
+    <string name="memory_swap">Virtual Memory (Swap)</string>
+    <string name="memory_swap_not_available">No swap memory</string>
+
+    <!-- Screenshot -->
+    <string name="screenshot_timeout_warning">Screenshot could not be captured. Make sure the Windows server is running as administrator and try again.</string>
+    
+    <!-- Auto Start & Keep Screen On -->
+    <string name="settings_auto_start">Auto-Start on Boot</string>
+    <string name="settings_auto_start_description">Automatically start monitoring when phone turns on</string>
+    <string name="settings_keep_screen_on">Keep Screen On</string>
+    <string name="settings_keep_screen_on_description">Prevent screen from turning off during monitoring</string>
+</resources>
+

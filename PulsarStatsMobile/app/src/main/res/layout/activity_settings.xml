@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/settings_title"
+            app:navigationIcon="@drawable/ic_back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Language Settings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_language"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/languageGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/languageSystem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language_system"
+                    android:checked="true" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/languageTurkish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language_turkish" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/languageEnglish"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/language_english" />
+            </RadioGroup>
+
+            <!-- Theme Settings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_theme"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/themeGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/themeSystem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_system"
+                    android:checked="true" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/themeLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_light" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/themeDark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_dark" />
+            </RadioGroup>
+
+            <!-- Genel Bildirim Ayarları -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_notifications"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/notificationEnabledSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_notification_enable"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Bildirim Tekrar Ayarları -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/alwaysRepeatSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_always_repeat"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Data Update Interval within notification section -->
+            <TextView
+                android:id="@+id/updateIntervalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_update_interval"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp" />
+
+            <RadioGroup
+                android:id="@+id/updateIntervalGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval1sec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_1_second" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval3sec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_3_seconds"
+                    android:checked="true" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval5sec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_5_seconds" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval10sec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_10_seconds" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/repeatIntervalLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_repeat_interval"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/repeatIntervalGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval5min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_5_minutes" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval15min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_15_minutes"
+                    android:checked="true" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval30min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_30_minutes" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/interval60min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/interval_60_minutes" />
+
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_theme_light_secondaryContainer"
+                android:layout_marginBottom="16dp" />
+
+            <!-- CPU Ayarları -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_cpu_section"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/cpuEnabledSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_cpu_enable"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/cpuThresholdSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="50"
+                android:valueTo="100"
+                android:stepSize="5"
+                android:value="80"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/cpuThresholdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eşik: 80%"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_theme_light_secondaryContainer"
+                android:layout_marginBottom="16dp" />
+
+            <!-- RAM Ayarları -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_ram_section"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/ramEnabledSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_ram_enable"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/ramThresholdSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="50"
+                android:valueTo="100"
+                android:stepSize="5"
+                android:value="90"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/ramThresholdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eşik: 90%"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_theme_light_secondaryContainer"
+                android:layout_marginBottom="16dp" />
+
+            <!-- CPU Sıcaklık Ayarları -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_cpu_temp_section"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/cpuTempEnabledSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_cpu_temp_enable"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/cpuTempThresholdSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="60"
+                android:valueTo="100"
+                android:stepSize="5"
+                android:value="80"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/cpuTempThresholdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eşik: 80°C"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_theme_light_secondaryContainer"
+                android:layout_marginBottom="16dp" />
+
+            <!-- GPU Sıcaklık Ayarları -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_gpu_temp_section"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/gpuTempEnabledSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_gpu_temp_enable"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/gpuTempThresholdSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="60"
+                android:valueTo="100"
+                android:stepSize="5"
+                android:value="85"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/gpuTempThresholdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eşik: 85°C"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_theme_light_secondaryContainer"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Disk Sıcaklık Ayarları -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_disk_temp_section"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/diskTempEnabledSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_disk_temp_enable"
+                android:layout_marginBottom="8dp" />
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/diskTempThresholdSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:valueFrom="40"
+                android:valueTo="80"
+                android:stepSize="5"
+                android:value="60"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/diskTempThresholdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eşik: 60°C"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_theme_light_secondaryContainer"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Sunucu Ayarları -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_server"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/md_theme_light_primary"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Auto Start on Boot -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_auto_start"
+                        android:textSize="16sp"
+                        android:textColor="?attr/colorOnBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_auto_start_description"
+                        android:textSize="12sp"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/autoStartSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!-- Keep Screen On -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_keep_screen_on"
+                        android:textSize="16sp"
+                        android:textColor="?attr/colorOnBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_keep_screen_on_description"
+                        android:textSize="12sp"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+
+                </LinearLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/keepScreenOnSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/changeServerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_change_server"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Kaydet Butonu - KALDIRILDI (Otomatik kayıt aktif) -->
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

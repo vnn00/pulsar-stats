@@ -1,0 +1,97 @@
+## Pulsar Stats - System Monitoring Application
+## .NET Core + Android + Web
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+publish/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+.history/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# MSTest Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Android
+*.apk
+*.aab
+*.dex
+.gradle/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.jks
+*.keystore
+release/
+
+# Memory Bank (Personal notes)
+memory-bank/
+
+# Build outputs
+*.sys
+*.bak
+*.tmp
+
+# Test files
+*test*.html
+connection*.html
+*.userosscache
+*.sln.docstates
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
