@@ -1,169 +1,169 @@
 # System Monitor Mobile (Android)
 
-Native Android uygulaması - PC sistem izleme uygulaması.
+Native Android application - PC system monitoring app.
 
-## Özellikler
+## Features
 
-✅ **Gerçek Zamanlı İzleme**
-- CPU kullanımı ve frekans
-- RAM kullanımı (kullanılan/toplam)
-- Disk kullanımı (tüm sürücüler)
-- Sıcaklıklar (CPU, GPU, Anakart)
-- Ağ hızları (indirme/yükleme)
+✅ **Real-time Monitoring**
+- CPU usage and frequency
+- RAM usage (used/total)
+- Disk usage (all drives)
+- Temperatures (CPU, GPU, Motherboard)
+- Network speeds (download/upload)
 
-✅ **Akıllı Bildirimler**
-- Ayarlanabilir eşik değerleri
-- CPU kullanım bildirimi (%50-100)
-- RAM kullanım bildirimi (%50-100)
-- CPU sıcaklık bildirimi (60-100°C)
-- GPU sıcaklık bildirimi (60-100°C)
-- Disk sıcaklık bildirimi (40-80°C)
-- Ses ve titreşim ayarları
+✅ **Smart Notifications**
+- Configurable threshold values
+- CPU usage notifications (50-100%)
+- RAM usage notifications (50-100%)
+- CPU temperature notifications (60-100°C)
+- GPU temperature notifications (60-100°C)
+- Disk temperature notifications (40-80°C)
+- Sound and vibration settings
 
-✅ **Kullanıcı Dostu**
-- Material Design 3 arayüz
+✅ **User Friendly**
+- Material Design 3 interface
 - Swipe-to-refresh
-- Sunucu IP adresi kaydetme
-- Otomatik yeniden bağlanma
+- Save server IP address
+- Auto-reconnect
 
-## Gereksinimler
+## Requirements
 
-### Geliştirme
-- Android Studio Hedgehog (2023.1.1) veya üzeri
+### Development
+- Android Studio Hedgehog (2023.1.1) or newer
 - JDK 21 (LTS)
 - Android SDK (API 24-34)
-- Gradle 8.13 (wrapper dahil)
+- Gradle 8.13 (included via wrapper)
 
-### Cihaz
-- Android 7.0 (API 24) veya üzeri
-- İnternet/WiFi bağlantısı (LAN)
+### Device
+- Android 7.0 (API 24) or newer
+- Internet/WiFi connection (LAN)
 
-## Kurulum & Build
+## Installation & Build
 
-### 1. Projeyi Aç
+### 1. Open Project
 ```bash
-# Android Studio'da: File > Open > SystemMonitorMobile klasörünü seç
+# In Android Studio: File > Open > Select SystemMonitorMobile folder
 ```
 
 ### 2. Gradle Sync
-Android Studio otomatik olarak dependencies'leri indirecektir.
+Android Studio will automatically download dependencies.
 
 ### 3. APK Build
 
-#### Debug APK (Test için)
+#### Debug APK (For Testing)
 ```bash
-# Terminal'de:
+# In terminal:
 cd SystemMonitorMobile
 gradlew assembleDebug
 
-# APK yeri: app\build\outputs\apk\debug\app-debug.apk
+# APK location: app\build\outputs\apk\debug\app-debug.apk
 ```
 
-#### Release APK (Yayın için)
+#### Release APK (For Publishing)
 ```bash
 gradlew assembleRelease
 
-# APK yeri: app\build\outputs\apk\release\app-release-unsigned.apk
+# APK location: app\build\outputs\apk\release\app-release-unsigned.apk
 ```
 
-### 4. Cihaza Yükleme
+### 4. Install on Device
 
-**USB ile:**
+**Via USB:**
 ```bash
 adb install app\build\outputs\apk\debug\app-debug.apk
 ```
 
-**Manuel:**
-1. APK dosyasını telefona kopyala
-2. Dosya yöneticisinden APK'yı aç
-3. "Bilinmeyen kaynaklardan yükleme"ye izin ver
-4. Kur
+**Manual:**
+1. Copy APK file to phone
+2. Open APK from file manager
+3. Allow "Install from unknown sources"
+4. Install
 
-## Kullanım
+## Usage
 
-### İlk Çalıştırma
+### First Run
 
-1. **Sunucu Başlat**
-   - PC'de `SystemMonitorServer.exe` çalıştır
-   - Sunucunun çalıştığı IP adresini not et (örn: `192.168.1.100`)
+1. **Start Server**
+   - Run `SystemMonitorServer.exe` on PC
+   - Note the server's IP address (e.g., `192.168.1.100`)
 
-2. **Mobil Uygulamayı Aç**
-   - IP adresi gir (örn: `192.168.1.100`)
+2. **Open Mobile App**
+   - Enter IP address (e.g., `192.168.1.100`)
    - Port: `5000` (default)
-   - "Bağlan" butonuna tıkla
+   - Tap "Connect" button
 
-3. **İzlemeye Başla**
-   - Bağlantı başarılı olunca ana ekran açılır
-   - Tüm metrikler 3 saniyede bir güncellenir
+3. **Start Monitoring**
+   - Main screen opens when connection is successful
+   - All metrics update every 3 seconds
 
-### Ayarlar
+### Settings
 
-**Bildirim Eşiklerini Ayarla:**
-1. Sağ üst köşede ⚙️ simgesine tıkla
-2. Her metrik için:
-   - Bildirimi aç/kapa
-   - Eşik değerini ayarla (slider ile)
-3. Ses/Titreşim tercihlerini seç
-4. "Kaydet" butonuna tıkla
+**Configure Notification Thresholds:**
+1. Tap ⚙️ icon in top-right corner
+2. For each metric:
+   - Enable/disable notification
+   - Set threshold value (with slider)
+3. Select sound/vibration preferences
+4. Tap "Save" button
 
-**Sunucu Değiştir:**
-1. Ayarlar > "Sunucu Adresini Değiştir"
-2. Yeni IP adresi gir
+**Change Server:**
+1. Settings > "Change Server Address"
+2. Enter new IP address
 
-### Özellikler
+### Features
 
-- **Swipe Down**: Bağlantıyı yenile
-- **⚙️ İkonu**: Ayarlar ekranını aç
-- **🔄 İkonu**: Manuel yenileme
+- **Swipe Down**: Refresh connection
+- **⚙️ Icon**: Open settings screen
+- **🔄 Icon**: Manual refresh
 
-## Sorun Giderme
+## Troubleshooting
 
-### Bağlantı Hatası
+### Connection Error
 
-**"Bağlantı başarısız!"**
-- ✅ PC ve telefon aynı WiFi'ye bağlı mı?
-- ✅ Sunucu çalışıyor mu?
-- ✅ IP adresi doğru mu?
-- ✅ Port 5000 açık mı?
-- ✅ Windows Firewall sunucuyu engelliyor mu?
+**"Connection failed!"**
+- ✅ Are PC and phone connected to same WiFi?
+- ✅ Is server running?
+- ✅ Is IP address correct?
+- ✅ Is port 5000 open?
+- ✅ Is Windows Firewall blocking the server?
 
-**IP Adresini Bulma (PC'de):**
+**Finding IP Address (on PC):**
 ```powershell
 ipconfig
-# "IPv4 Address" satırına bak (örn: 192.168.1.100)
+# Look for "IPv4 Address" line (e.g., 192.168.1.100)
 ```
 
-### Bildirimler Gelmiyor
+### Notifications Not Working
 
-- ✅ Ayarlar > Bildirimler etkin mi?
-- ✅ Android sistem ayarlarından uygulama bildirimleri açık mı?
-- ✅ Eşik değerleri çok yüksek mı?
-- ✅ Pil tasarrufu modu kapalı mı?
+- ✅ Settings > Are notifications enabled?
+- ✅ Are app notifications enabled in Android system settings?
+- ✅ Are threshold values too high?
+- ✅ Is battery saver mode off?
 
-### Uygulamayı Arka Planda Çalıştırma
+### Running App in Background
 
 Android 12+:
-1. Ayarlar > Uygulamalar > System Monitor
-2. Pil > Kısıtlanmamış
-3. Bildirimler > Tüm bildirimlere izin ver
+1. Settings > Apps > System Monitor
+2. Battery > Unrestricted
+3. Notifications > Allow all notifications
 
-## Teknik Detaylar
+## Technical Details
 
-### Kullanılan Teknolojiler
-- **Dil**: Java
+### Technologies Used
+- **Language**: Java
 - **UI**: Material Design 3
 - **WebSocket**: SignalR Java Client 7.0
 - **JSON**: Gson 2.10.1
 - **Min SDK**: 24 (Android 7.0)
 - **Target SDK**: 34 (Android 14)
 
-### Mimari
+### Architecture
 ```
 App
 ├── Activities
-│   ├── SplashActivity (IP giriş)
+│   ├── SplashActivity (IP entry)
 │   ├── MainActivity (monitoring)
-│   └── SettingsActivity (ayarlar)
+│   └── SettingsActivity (settings)
 ├── Services
 │   └── MonitoringService (background)
 ├── Models
@@ -172,12 +172,12 @@ App
 │   └── NotificationSettings
 └── Utils
     ├── SignalRManager (WebSocket)
-    └── PreferencesHelper (kayıt)
+    └── PreferencesHelper (storage)
 ```
 
-## Geliştirme Notları
+## Development Notes
 
-### Dependencies Güncelleme
+### Updating Dependencies
 ```gradle
 // app/build.gradle
 dependencies {
@@ -189,27 +189,27 @@ dependencies {
 ```
 
 ### Build Variants
-- **Debug**: Geliştirme için, ProGuard yok
-- **Release**: Yayın için, ProGuard aktif
+- **Debug**: For development, no ProGuard
+- **Release**: For publishing, ProGuard enabled
 
-## Lisans
-Bu proje özel kullanım içindir.
+## License
+See [LICENSE](../../LICENSE) file for details.
 
-## Katkıda Bulunanlar
-- Başak (Developer)
+## Contributors
+- vnn00 (Developer)
 
-## Sürüm Geçmişi
+## Version History
 
-### v1.0.0 (12 Ekim 2025)
-- ✅ İlk sürüm
-- ✅ Gerçek zamanlı izleme
-- ✅ Bildirim sistemi
-- ✅ Ayarlanabilir eşikler
+### v3.10.4 (October 18, 2025)
+- ✅ Java 21 LTS support
+- ✅ Real-time monitoring
+- ✅ Notification system
+- ✅ Configurable thresholds
 - ✅ Material Design 3 UI
 
-## İletişim
-Sorularınız için GitHub Issues kullanabilirsiniz.
+## Contact
+For questions, please use GitHub Issues.
 
 ---
 
-**Not:** Bu uygulama PC ile aynı WiFi ağında çalışacak şekilde tasarlanmıştır. İnternet üzerinden erişim için port forwarding ve güvenlik ayarları gereklidir.
+**Note:** This application is designed to work on the same WiFi network as the PC. For internet access, port forwarding and security settings are required.

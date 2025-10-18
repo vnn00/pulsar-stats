@@ -1,143 +1,143 @@
-# System Monitor Server v2.0 - Sistem Tepsisi Sürümü
+# System Monitor Server v2.0 - System Tray Edition
 
-## 🎯 Yenilikler (v2.0)
+## 🎯 What's New (v2.0)
 
-### ✨ Sistem Tepsisi (System Tray) Desteği
-- Uygulama artık Windows sistem tepsisinde çalışır
-- Konsolsuz, arka planda sessiz çalışma
-- Sağ tık menüsü ile kolay erişim
+### ✨ System Tray Support
+- Application now runs in Windows system tray
+- Silent background operation without console
+- Easy access via right-click menu
 
-### ⚙️ Yeni Özellikler
+### ⚙️ New Features
 
-#### 1. Sağ Tık Menüsü
-- **📊 Sunucu Bilgisi**: Sunucu durumu ve bağlantı bilgileri
-- **🌐 Test Sayfası Aç**: Web tarayıcısında test client'ı açar
-- **📝 Logları Göster**: (Gelecek sürümde aktif)
+#### 1. Right-Click Menu
+- **📊 Server Info**: Server status and connection information
+- **🌐 Open Test Page**: Opens test client in web browser
+- **📝 Show Logs**: (Coming in future release)
 
-#### 2. Ayarlar Menüsü
-- **Windows ile Başlat**: Bilgisayar açıldığında otomatik başlat
-- **Gizli Modda Çalış**: Sistem tepsisinde bile görünmez (tamamen gizli)
+#### 2. Settings Menu
+- **Start with Windows**: Auto-start when computer boots
+- **Run in Stealth Mode**: Hide completely, even from system tray
 
-#### 3. Gizli Mod Özelliği
-- Aktif edildiğinde sistem tepsisinde icon görünmez
-- Windows yeniden başlatılsa bile gizli kalır
-- Ayar kayıt defterinde (Registry) saklanır
-- Kapatmak için: Görev Yöneticisi'nden sonlandırın ve tekrar başlatıp ayarı kapatın
+#### 3. Stealth Mode Feature
+- System tray icon becomes invisible when activated
+- Remains hidden even after Windows restart
+- Setting saved in Windows Registry
+- To disable: Terminate from Task Manager and restart application to disable setting
 
-## 🚀 Kullanım
+## 🚀 Usage
 
-### İlk Başlatma
-1. `SystemMonitorServer.exe` çalıştırın
-2. Sistem tepsisinde (saat yanında) uygulama ikonu belirecek
-3. İkona sağ tıklayın ve menüyü görün
+### First Launch
+1. Run `SystemMonitorServer.exe`
+2. Application icon will appear in system tray (next to clock)
+3. Right-click the icon to see the menu
 
-### Sunucu Bilgilerini Görme
-- İkona **çift tıklayın** veya
-- Sağ tık → **Sunucu Bilgisi**
+### View Server Information
+- **Double-click** the icon or
+- Right-click → **Server Info**
 
-### Otomatik Başlatma Ayarı
-1. Sağ tık → **Ayarlar** → **Windows ile Başlat**
-2. İşaretli olması otomatik başlatmayı aktif eder
-3. Artık Windows açıldığında sunucu otomatik başlayacak
+### Auto-Start Setup
+1. Right-click → **Settings** → **Start with Windows**
+2. Check this option to enable auto-start
+3. Server will now start automatically when Windows boots
 
-### Gizli Mod (Stealth Mode)
-⚠️ **DİKKAT**: Bu modu aktif etmeden önce dikkatli okuyun!
+### Stealth Mode
+⚠️ **WARNING**: Read carefully before enabling this mode!
 
-1. Sağ tık → **Ayarlar** → **Gizli Modda Çalış**
-2. Onay mesajını okuyun ve "Tamam" deyin
-3. Artık sistem tepsisinde icon **görünmeyecek**
-4. Sunucu arka planda çalışmaya devam edecek
+1. Right-click → **Settings** → **Run in Stealth Mode**
+2. Read confirmation message and click "OK"
+3. System tray icon will now be **invisible**
+4. Server continues running in background
 
-**Gizli Modu Kapatmak İçin**:
-1. Görev Yöneticisi'ni açın (Ctrl+Shift+Esc)
-2. "SystemMonitorServer.exe" işlemini bulun ve sonlandırın
-3. Uygulamayı normal şekilde tekrar başlatın
-4. Sağ tık → Ayarlar → "Gizli Modda Çalış" işaretini kaldırın
+**To Disable Stealth Mode**:
+1. Open Task Manager (Ctrl+Shift+Esc)
+2. Find "SystemMonitorServer.exe" process and terminate it
+3. Restart application normally
+4. Right-click → Settings → Uncheck "Run in Stealth Mode"
 
-### Uygulamayı Kapatma
-- Sağ tık → **Çıkış**
-- Onay mesajında "Evet" deyin
+### Closing the Application
+- Right-click → **Exit**
+- Confirm with "Yes" in the dialog
 
-## 📡 Bağlantı Bilgileri
+## 📡 Connection Information
 
-- **URL**: `http://[BILGISAYAR_IP]:5000`
+- **URL**: `http://[COMPUTER_IP]:5000`
 - **SignalR Hub**: `/systemhub`
-- **Güncelleme Aralığı**: 3 saniye
+- **Update Interval**: 3 seconds
 - **Platform**: Windows (.NET 9.0)
 
-## 🔧 Teknik Detaylar
+## 🔧 Technical Details
 
-### Kayıt Defteri (Registry) Konumları
+### Registry Locations
 
-**Otomatik Başlatma**:
+**Auto-Start**:
 ```
 HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run
-Anahtar: SystemMonitor
-Değer: "C:\...\SystemMonitorServer.exe"
+Key: SystemMonitor
+Value: "C:\...\SystemMonitorServer.exe"
 ```
 
-**Gizli Mod Ayarı**:
+**Stealth Mode Setting**:
 ```
 HKEY_CURRENT_USER\SOFTWARE\SystemMonitor
-Anahtar: HideOnStartup
-Değer: 1 (gizli) / 0 (görünür)
+Key: HideOnStartup
+Value: 1 (hidden) / 0 (visible)
 ```
 
-### Özellikler
-- **Self-contained**: .NET runtime dahil, kurulum gerektirmez
-- **Single-file**: Tek EXE dosyası
-- **Admin rights**: Sıcaklık sensörleri için yönetici yetkisi önerilir
+### Features
+- **Self-contained**: .NET runtime included, no installation required
+- **Single-file**: Single EXE file
+- **Admin rights**: Administrator privileges recommended for temperature sensors
 - **Windows Forms**: Native Windows UI
-- **ASP.NET Core**: Web API ve SignalR backend
+- **ASP.NET Core**: Web API and SignalR backend
 
-## 📂 Dosya Boyutu
+## 📂 File Size
 
-- **EXE**: ~100-105 MB (self-contained, tüm bağımlılıklar dahil)
+- **EXE**: ~100-105 MB (self-contained, all dependencies included)
 - **Runtime**: .NET 9.0 Windows
 
-## 🐛 Sorun Giderme
+## 🐛 Troubleshooting
 
-### Sistem tepsisinde icon görünmüyor
-- Ayarlar'da "Gizli Mod" aktif mi kontrol edin
-- Görev Yöneticisi'nde uygulama çalışıyor mu bakın
+### Icon not visible in system tray
+- Check if "Stealth Mode" is enabled in Settings
+- Check if application is running in Task Manager
 
-### Windows ile başlamıyor
-- Yönetici olarak çalıştırıp ayarı tekrar aktif edin
-- Registry'de `Run` anahtarını manuel kontrol edin
+### Not starting with Windows
+- Run as administrator and re-enable the setting
+- Manually check `Run` key in Registry
 
-### Sıcaklık verileri gelmiyor
-- Uygulamayı **Yönetici olarak çalıştır**
-- Donanımınız sıcaklık sensörlerini desteklemeyebilir
+### No temperature data
+- **Run as administrator**
+- Your hardware may not support temperature sensors
 
-### Android app bağlanamıyor
-- Windows Firewall'da port 5000 açık mı kontrol edin
-- Aynı WiFi ağında olduğunuzdan emin olun
-- IP adresini doğru girdiğinizi kontrol edin
+### Android app can't connect
+- Check if port 5000 is open in Windows Firewall
+- Make sure you're on the same WiFi network
+- Verify the IP address is correct
 
-## 📝 Değişiklik Günlüğü
+## 📝 Changelog
 
 ### v2.0.0 (October 12, 2025)
-- ✨ Sistem tepsisi (system tray) desteği eklendi
-- ✨ Windows otomatik başlatma özelliği
-- ✨ Gizli mod (stealth mode) özelliği
-- ✨ Sağ tık menüsü ile kolay yönetim
-- 🔧 Konsolsuz çalışma (WinExe)
-- 🔧 Registry tabanlı ayar saklama
+- ✨ Added system tray support
+- ✨ Windows auto-start feature
+- ✨ Stealth mode feature
+- ✨ Easy management with right-click menu
+- 🔧 Console-free operation (WinExe)
+- 🔧 Registry-based settings storage
 
 ### v1.1.0 (October 12, 2025)
-- 🐛 Network binding düzeltildi (0.0.0.0:5000)
-- 🐛 JSON serialization düzeltildi (camelCase)
-- 📱 Android app ile uyumluluk sağlandı
+- 🐛 Fixed network binding (0.0.0.0:5000)
+- 🐛 Fixed JSON serialization (camelCase)
+- 📱 Compatibility with Android app
 
 ### v1.0.0 (October 12, 2025)
-- 🎉 İlk sürüm
-- ✅ CPU, RAM, Disk, Sıcaklık, Network monitoring
-- ✅ SignalR WebSocket desteği
+- 🎉 Initial release
+- ✅ CPU, RAM, Disk, Temperature, Network monitoring
+- ✅ SignalR WebSocket support
 - ✅ Self-contained EXE
 
-## 📞 Destek
+## 📞 Support
 
-Sorun veya öneri için GitHub Issues kullanın.
+Use GitHub Issues for problems or suggestions.
 
 ---
 
