@@ -55,9 +55,6 @@ captures/
 *.keystore
 release/
 
-# Memory Bank (Personal notes)
-memory-bank/
-
 # Build outputs
 *.sys
 *.bak
