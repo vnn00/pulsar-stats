@@ -334,7 +334,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Temperature sensors require administrator privileges on Windows
 - GPU monitoring may not work with all graphics cards
 - Linux temperature sensors depend on hardware support and drivers
-- Screenshot feature is Windows-only (Linux support planned)
+- Screenshot.
 
 ## 🗺️ Roadmap
 
